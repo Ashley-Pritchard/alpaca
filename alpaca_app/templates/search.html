@@ -3,11 +3,28 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
+
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+
+
  <div class="topnav">
    <a class="active" href="{% url 'index' %}">Search Variants</a>
    <a class="active" href="{% url 'import_variant' %}">Import Variants</a>
  </div> 
   <h1>Alpaca Variant Database</h1><br>
+
+  <p>
+{{results|safe}}
+  <script>
+  $(document).ready(function(){
+  $("#total_counts").DataTable( 
+    );
+  } );
+  </script>
+</p>
+
 {% endblock %}
 
 

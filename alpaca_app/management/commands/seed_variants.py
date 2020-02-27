@@ -171,7 +171,7 @@ class FileImport():
 			cancer = Cancer_diagnosis.objects.get(stage=row.Stage, description=row.Description)
 
 
-			print(patient.id)
+	
 			patient_cancer, created = Patient_cancer.objects.get_or_create(
 																patient_id=patient,
 																cancer_diagnosis_id=cancer
