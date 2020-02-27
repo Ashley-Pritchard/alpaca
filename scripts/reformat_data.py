@@ -28,6 +28,25 @@ class ReformatData(object):
 
 		variants = variants.drop('Unnamed: 10', axis=1)
 
+		cols = {
+				'Affected Relatives': 'affected_relatives',
+				'Variant cDNA': 'variant_cdna',
+				'Variant Protein': 'variant_protein',
+				'Variant Genome': 'variant_genome',
+				'Pathogenicity Code': 'pathogenicity_code',
+				'Evidence Codes': 'evidence_codes'
+		}
+
+		variants.rename(columns=cols, inplace=True)
+
+		variants['disease'] = 'breast_cancer'
+
+		variants['gene'] = 'BRCA1'
+
+		variants['chromosome'] = '17'
+
+		variants['user'] = 'unknown'
+
 		PATH = os.path.dirname(os.path.realpath(__file__))
 		filename = self.variants_file.split('/')[-1].split('.')[0]
 		variants_seed = os.path.join(PATH, '..', '..', filename + '_seed.tsv')
