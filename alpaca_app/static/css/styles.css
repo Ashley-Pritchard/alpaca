@@ -45,13 +45,13 @@ table {
 }
 
 td {
-	padding: 10px 10px 10px 5px;
-	width: 100%
+	padding: 10px 10px 10px 10px;
+	width: auto
 }
 
 form {
 	text-align: center;
-	width: 100%
+	width: auto
 }
 
 input {
@@ -59,6 +59,8 @@ input {
 	word-wrap: break-word;
 	white-space: normal;
 }
+
+
 
 
 
