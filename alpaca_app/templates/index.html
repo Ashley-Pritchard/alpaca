@@ -1,0 +1,59 @@
+<! index page for the alpaca variant database - acts as a search engine to look up variants seen in the alpaca lab !>
+
+{% extends "base_generic.html" %}
+
+{% block content %}
+ <div class="topnav">
+   <a class="active" href="{% url 'index' %}">Search Variants</a>
+   <a class="active" href="{% url 'import_variant' %}">Import Variants</a>
+ </div> 
+  <h1>Alpaca Variant Database</h1><br>
+  <p>Welcome to the Alpaca Variant Database for the Alpaca Molecular Genetics Laboratory. Fill in one or more boxes in the form below to search for variants: </p><br>
+  <div>
+    <form class="SearchForm" method="get" action="{% url 'search' %}">
+      <table>
+        <tr>
+          <td>
+          </td>
+          <td>
+      Variant (c.):
+          </td>
+          <td colspan="4">
+            <input id="searchbox" name="variant_c_input" type="text"><br>
+          </td>
+          <td>
+          </td>
+          <td>
+      Variant (g.):
+          </td>
+          <td colspan="4">
+      <input id="searchbox" name="variant_g_input" type="text"><br>
+          <td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td>
+      Variant (p.):
+          </td>
+          <td colspan="4">
+      <input id="searchbox" name="variant_p_input" type="text"><br>
+          </td>
+          <td>
+          </td>
+          <td>
+      Gene:
+          </td>
+          <td colspan="4">
+      <input id="searchbox" name="gene_input" type="text"><br>
+          </td>
+        </tr>
+
+      </table><br><br>
+      <input class="p1" type="submit" value="Search">
+    </form>
+  </div>
+{% endblock %}
+
+
+

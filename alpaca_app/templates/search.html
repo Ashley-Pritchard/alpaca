@@ -1,0 +1,14 @@
+<! index page for the alpaca variant database - acts as a search endgine to look up variants seen in the lab and add classifications for novel ones !>
+
+{% extends "base_generic.html" %}
+
+{% block content %}
+ <div class="topnav">
+   <a class="active" href="{% url 'index' %}">Search Variants</a>
+   <a class="active" href="{% url 'import_variant' %}">Import Variants</a>
+ </div> 
+  <h1>Alpaca Variant Database</h1><br>
+{% endblock %}
+
+
+

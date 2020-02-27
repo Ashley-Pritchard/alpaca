@@ -18,7 +18,7 @@ class cancer_diagnosis(models.Model):
 	description = models.CharField(max_length=500)
 
 class sequencer(models.Model):
-	choices = [('miseq', 'miseq'), ('hiseq', 'hiseq'), ('unknown', 'unknown')]
+	choices = [('MiSeq', 'MiSeq'), ('HiSeq', 'HiSeq'), ('unknown', 'unknown')]
 	sequencer = models.CharField(max_length = 100, default = 'unknown', choices=choices)
 	
 class disease(models.Model):
@@ -39,6 +39,7 @@ class classification(models.Model):
 	pm1 = models.CharField(max_length = 3, default = 'no', choices=choices)
 	pm2 = models.CharField(max_length = 3, default = 'no', choices=choices)
 	pm3 = models.CharField(max_length = 3, default = 'no', choices=choices)
+	pm4 = models.CharField(max_length = 3, default = 'no', choices=choices)
 	pm5 = models.CharField(max_length = 3, default = 'no', choices=choices)
 	pm6 = models.CharField(max_length = 3, default = 'no', choices=choices)
 	pp1 = models.CharField(max_length = 3, default = 'no', choices=choices)
@@ -46,6 +47,7 @@ class classification(models.Model):
 	pp3 = models.CharField(max_length = 3, default = 'no', choices=choices)
 	pp4 = models.CharField(max_length = 3, default = 'no', choices=choices)
 	pp5 = models.CharField(max_length = 3, default = 'no', choices=choices)
+	pp6 = models.CharField(max_length = 3, default = 'no', choices=choices)
 	ba1 = models.CharField(max_length = 3, default = 'no', choices=choices)
 	bs1 = models.CharField(max_length = 3, default = 'no', choices=choices)
 	bs2 = models.CharField(max_length = 3, default = 'no', choices=choices)
@@ -63,7 +65,7 @@ class patient_cancer(models.Model):
 	patient_id = models.ForeignKey(patient, on_delete = models.SET_NULL, null=True, blank=True)
 	cancer_diagnosis = models.ForeignKey(cancer_diagnosis, on_delete = models.SET_NULL, null=True, blank=True)
 
-class patient_disese(models.Model):
+class patient_disease(models.Model):
 	patient_id = models.ForeignKey(patient, on_delete = models.SET_NULL, null=True, blank=True)
 	disease_id = models.ForeignKey(patient_cancer, on_delete = models.SET_NULL, null=True, blank=True)
 
