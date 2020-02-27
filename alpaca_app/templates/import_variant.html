@@ -9,21 +9,250 @@
  </div> 
   <h1>Alpaca Variant Database</h1><br>
   <form action="{% url 'imported' %}" method="GET">
+  <p><strong>Patient Information</strong></p><br>
     <table>
       <tr>
         <td>
+        Patient First Name:
         </td>
+        <td colspan="3">
+        <input name="first_name" type="text">
+        </td>
+	<td> 
+	Patient Last Name:
+	</td>
+	<td colspan="3">
+	<input name="last_name" type="text">
+	</td>
+	<td> 
+	Patient Age:
+	</td>
+	<td colspan="3">
+	<input name="age" type="number">
+	</td>
+	</tr>
+	<tr>
+	<td>
+	Proband:
+	</td>
+	<td colspan="3">
+	<select name="proband" type="text"><br>
+          <option value="unknown">Unknown</option>
+          <option value="yes">Yes</option>
+          <option value="no">no</option>
+        </td>
+	<td>
+	Affected Relatives:
+	</td>
+	<td colspan="3">
+	<select name="affected_relatives" type="text"><br>
+          <option value="unknown">Unknown</option>
+          <option value="yes">Yes</option>
+          <option value="no">no</option>
+        </td>
+	</table><br><br>
+  <p><strong>Disease Information</strong></p><br>
+    <table>
+      <tr>
         <td>
-        Submit a variant:
-        </td>
+	Disease:
+	</td>
+	<td colspan="3">
+	<input name="disease" type="text">
+	</td>
+	<td>
+	Cancer Stage:
+	</td>
+	<td colspan="3">
+	<select name="cancer_stage" type="number"><br>
+          <option value="">Select</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+          <option value="3">Four</option>
+	</td>
+	<td>
+	Cancer Description:
+	</td>
+	<td colspan="3"> 
+	<input name="cancer_description" type="text">
+	</td>
+	</tr>
+	</table><br><br>
+  <p><strong>Variant Information</strong></p><br>
+    <table>
+      <tr>
         <td>
-        <input name="variant" type="text" required>
-        </td>
+	Sequener:
+	</td>
+	<td colspan="3">
+	<select name="sequencer" type="text"><br>
+          <option value="unknown">Unknown</option>
+          <option value="HiSeq">HiSeq</option>
+          <option value="MiSeq">MiSeq</option>
+	</td>
+	<td>
+	Gene:
+	</td>
+	<td colspan="3">
+	<input name="gene" type="text">
+	</td>
+	<td>
+	Chromosome:
+	</td>
+	<td colspan="3">
+	<input name="chromosome" type="text">
+	</td>
+	<tr>
+	<td>
+	c.name:
+	</td>
+	<td colspan="3">
+	<input name="c_dot" type="text">
+	</td>
+	<td>
+	g.name:
+	</td>
+	<td colspan="3">
+	<input name="g_name" type="text">
+	</td>
+	<td>
+	p.name:
+	</td>
+	<td colspan="3">
+	<input name="p_name" type="text">
+	</td>
+	</tr>
+	</table><br><br>
+  <p><strong>Classification Evidence</strong></p><br>
+    <table>
+      <tr>
         <td>
-          <input type="submit" value="Submit">   
-        </td>
-      </tr>
-    </table>          
+	PVS1
+	<input type="checkbox" name="pvs1">
+	</td>
+        <td>
+	PS1
+	<input type="checkbox" name="pvs1">
+	</td>
+        <td>
+	PS2
+	<input type="checkbox" name="pvs1">
+	</td>
+        <td>
+	PS4
+	<input type="checkbox" name="pvs1">
+	</td>
+        <td>
+	PM1
+	<input type="checkbox" name="pvs1">
+	</td>
+        <td>
+	PM2
+	<input type="checkbox" name="pvs1">
+	</td>
+        <td>
+	PM3
+	<input type="checkbox" name="pvs1">
+	</td>
+        <td>
+	PM4
+	<input type="checkbox" name="pvs1">
+	</td>
+        <td>
+	PM5
+	<input type="checkbox" name="pvs1">
+	</td>
+        <td>
+	PM6
+	<input type="checkbox" name="pvs1">
+	</td>
+	</tr>
+	<tr>
+        <td>
+	PP1
+	<input type="checkbox" name="pvs1">
+	</td>	
+        <td>
+	PP2
+	<input type="checkbox" name="pvs1">
+	</td>
+        <td>
+	PP3
+	<input type="checkbox" name="pvs1">
+	</td>
+        <td>
+	PP4
+	<input type="checkbox" name="pvs1">
+	</td>
+        <td>
+	PP5
+	<input type="checkbox" name="pvs1">
+	</td>
+        <td>
+	PP6
+	<input type="checkbox" name="pvs1">
+	</td>
+        <td>
+	BA1
+	<input type="checkbox" name="pvs1">
+	</td>
+        <td>
+	BS1
+	<input type="checkbox" name="pvs1">
+	</td>
+        <td>
+	BS2
+	<input type="checkbox" name="pvs1">
+	</td>
+        <td>
+	BS3
+	<input type="checkbox" name="pvs1">
+	</td>
+	</tr>
+	<tr>
+        <td>
+	BS4
+	<input type="checkbox" name="pvs1">
+	</td>
+        <td>
+	BP1
+	<input type="checkbox" name="pvs1">
+	</td>
+        <td>
+	BP2
+	<input type="checkbox" name="pvs1">
+	</td>
+        <td>
+	BP3
+	<input type="checkbox" name="pvs1">
+	</td>
+        <td>
+	BP4
+	<input type="checkbox" name="pvs1">
+	</td>
+        <td>
+	BP5
+	<input type="checkbox" name="pvs1">
+	</td>
+        <td>
+	BP6
+	<input type="checkbox" name="pvs1">
+	</td>
+        <td>
+	BP7
+	<input type="checkbox" name="pvs1">
+	</td>
+	</tr>
+	<tr>
+	<td>
+	Classification:
+	<td>
+	<input name="classification" type="text">
+	</td>
+	<tr>
+	</table><br><br>
+          <input type="submit" value="Submit">           
   </form>
 {% endblock %}
 
