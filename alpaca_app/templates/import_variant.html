@@ -1,0 +1,31 @@
+<! import page for the alpaca variant database - allows user to import novel variants !>
+
+{% extends "base_generic.html" %}
+
+{% block content %}
+ <div class="topnav">
+   <a class="active" href="{% url 'index' %}">Search Variants</a>
+   <a class="active" href="{% url 'import_variant' %}">Import Variants</a>
+ </div> 
+  <h1>Alpaca Variant Database</h1><br>
+  <form action="{% url 'imported' %}" method="GET">
+    <table>
+      <tr>
+        <td>
+        </td>
+        <td>
+        Submit a variant:
+        </td>
+        <td>
+        <input name="variant" type="text" required>
+        </td>
+        <td>
+          <input type="submit" value="Submit">   
+        </td>
+      </tr>
+    </table>          
+  </form>
+{% endblock %}
+
+
+
