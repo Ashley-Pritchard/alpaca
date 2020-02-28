@@ -9,6 +9,12 @@
  </div> 
   <h1>Alpaca Variant Database</h1><br>
   <p>Welcome to the Alpaca Variant Database for the Alpaca Molecular Genetics Laboratory. Fill in one or more boxes in the form below to search for variants: </p><br>
+  {% if form.errors %}
+    {% for field in form %}
+        {% for error in field.errors %}
+    {% endfor %}
+    {% endfor %}
+    {% endif %}
   <div>
     <form class="SearchForm" method="get" action="{% url 'index' %}">
       <table>
