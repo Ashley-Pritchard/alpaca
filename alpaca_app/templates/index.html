@@ -11,9 +11,10 @@
  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQBjyECq0ka0ypVuaUcvVUHpJvbnaVb7aM7SO7Jk3IIYpCSkyff" width=19% height=25% align=center>
 </div>
  <div class="topnav">
-   <a class="active" href="{% url 'index' %}">Search Variants</a>
+   <br><a class="active" href="{% url 'index' %}">Search Variants</a>
    <a class="active" href="{% url 'import_variant' %}">Import Variants</a>
  </div> 
+<div>
   <h1>Alpaca Variant Database</h1><br>
   <p>Welcome to the Alpaca Variant Database for the Alpaca Molecular Genetics Laboratory. Fill in one or more boxes in the form below to search for variants: </p><br>
   {% if form.errors %}
