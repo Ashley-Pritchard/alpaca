@@ -13,4 +13,6 @@ class VariantSearchForm(forms.Form):
 
 	gene_input = forms.CharField(label='Variant Description', required=False)
 
+	region_input = forms.CharField(label='Variant Description', required=False)
+
 
