@@ -8,7 +8,7 @@
    <a class="active" href="{% url 'import_variant' %}">Import Variants</a>
  </div> 
   <h1>Alpaca Variant Database</h1><br>
-  <form action="{% url 'imported' %}" method="GET">
+  <form action="{% url 'imported' %}" method="POST">{% csrf_token %}
   <p><strong>Patient Information</strong></p><br>
     <table>
       <tr>
@@ -108,7 +108,7 @@
 	c.name:
 	</td>
 	<td colspan="3">
-	<input name="c_dot" type="text">
+	<input name="c_name" type="text">
 	</td>
 	<td>
 	g.name:

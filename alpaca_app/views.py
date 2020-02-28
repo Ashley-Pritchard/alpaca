@@ -6,7 +6,7 @@ from .models import *
 def index(request):
 	return render(request, 'index.html')
 
-def search(request):
+def search(request):	
 	return render(request, 'search.html')
 
 def import_variant(request):
@@ -14,11 +14,13 @@ def import_variant(request):
 
 def imported(request):
 	
-	patient = Patient()
-	patient.first_name = request.POST.get('first_name')
-	patient.last_name = request.POST.get('last_name')
-	patient.age = request.POST.get('age')
-	patient.proband = request.POST.get('proband')
-	patient.affected_relatives = request.POST.get('affected_relatives')
+	gene = Gene.objects.get(id=1)
+	variant = Variant()
+	variant.p_name = request.POST.get('p_name')
+	variant.g_name = request.POST.get('g_name')
+	variant.c_name = request.POST.get('c_name')
+	variant.gene_id = gene
+	variant.classification = request.POST.get('classification')
+	variant.save()
 
 	return render(request, 'imported.html')
